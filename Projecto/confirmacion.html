@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmación de Pedido</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="Img/burger.png" alt="Logo">
+      <h1>Conde Burguer</h1>
+    </div>
+  </header>
+
+  <main class="confirmacion">
+    <h2>✅ Pedido Confirmado</h2>
+    <p>Gracias por tu compra. Este es el resumen de tu pedido:</p>
+
+    <div id="resumenPedido"></div>
+
+    <a href="menu.html" class="btn-volver">Volver al menú</a>
+  </main>
+
+  <script>
+    // Recuperar el último pedido guardado
+    const pedidos = JSON.parse(localStorage.getItem('pedidos')) || [];
+    const ultimoPedido = pedidos[pedidos.length - 1];
+    const resumenDiv = document.querySelector('#resumenPedido');
+
+    if (ultimoPedido) {
+      const { cliente, productos, total, fecha } = ultimoPedido;
+      resumenDiv.innerHTML = `
+        <h3>Datos del cliente</h3>
+        <p><strong>Nombre:</strong> ${cliente.nombre}</p>
+        <p><strong>Dirección:</strong> ${cliente.direccion}</p>
+        <p><strong>Contacto:</strong> ${cliente.contacto}</p>
+        <p><strong>Fecha:</strong> ${fecha}</p>
+
+        <h3>Productos</h3>
+        <ul>
+          ${productos.map(p => `<li>${p.quantity}x ${p.title} - $${(p.price * p.quantity).toFixed(2)}</li>`).join('')}
+        </ul>
+
+        <h3>Total: $${total.toFixed(2)}</h3>
+      `;
+    } else {
+      resumenDiv.innerHTML = "<p>No hay pedido para mostrar.</p>";
+    }
+  </script>
+</body>
+</html>

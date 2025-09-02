@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página de Comida</title>
+      <link rel="stylesheet" href="/plugins/fontawesome/css/all.min.css">
+      
+   
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+     <a href="/Projecto/menu.html"><img src="/Img/burger.png" alt="Logo de la empresa"></a> <!-- Coloca aquí tu logo -->
+   
+    <nav>
+     
+    
+
+    <h1>Conde Burguer</h1>
+
+       
+    
+    </nav>
+  <div class="btn-cart">
+                    <button type="button"><i class="fa-solid fa-cart-shopping icon-cart"></i></button>  
+                    <span id="cartCount">0</span>
+
+                    <div class="cart">
+                        <div class="cart-responsive">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Descripcion</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="contentProducts">
+                                    <!-- <tr>
+                                        <td><img src="/assets/img/products/product-01.jpg" alt=""></td>
+                                        <td>
+                                            Lorem ipsum dolor sit.
+                                        </td>
+                                        <td>$15</td>
+                                        <td>
+                                            <input type="number" min="1">
+                                        </td>
+                                        <td>
+                                            <button type="button">X</button>
+                                        </td>
+                                    </tr> -->
+                                </tbody>
+                    
+                                <tfoot>
+                                    <tr>
+                                        <td colspan="5" class="total">
+                                            <h4 class="heading-total">Total: <span id="total"></span></h4>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="5">
+                                            <button type="button" id="emptyCart">Vaciar carrito</button>
+                                        </td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+
+
+                            <div class="pedido-form">
+  <h3>Datos del pedido</h3>
+  <form id="pedidoForm">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" required>
+
+    <label for="direccion">Dirección:</label>
+    <input type="text" id="direccion" required>
+
+    <label for="contacto">Contacto:</label>
+    <input type="tel" id="contacto" required>
+
+    <button type="submit">Confirmar Pedido</button>
+  </form>
+</div>
+                        </div>
+                    </div>
+
+                </div> 
+  
+  </header> 
+
+
+
+  <!-- Contenido principal -->
+  <article>
+    <h2>¡Bienvenido a Nuestra Comida!</h2>
+    <p>Disfruta de nuestras comida y pedidos al instante</p>
+    <br><br>
+    <img src="/Img/Ropa-Vieja-Patty-Cuban-v4.jpg" alt="Imagen de pedidos"> <!-- Imagen de ejemplo -->
+  </article>
+
+
+    <main>
+        <section class="products" id="listProducts">
+            <h2>Menu</h2>
+            <div class="products-grid container">
+                <div class="product">
+                    <img src="/Img/hamburguesa.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Hamburguesa</h4>
+                        <p class="product-text">Deliciosa hamburguesa</p>
+                        
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+
+                        <div class="price">
+                            <span>$40.000</span>
+                            <p id="currentPrice">$17.000</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="1" aria-label="Agregar al carrito"  >Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+
+             <div class="product">
+                    <img src="/Img/pizza.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Pizza</h4>
+                        <p class="product-text">Deliciosa pizza</p>
+                        
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+
+                        <div class="price">
+                            <span>$40.000</span>
+                            <p id="currentPrice">$17.000</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="2"  aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div>
+
+
+<!--.product-->
+                <div class="product">
+                    <img src="/Img/tacos.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Tacos</h4>
+                        <p class="product-text">3 unidades de tacos</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="3"  aria-label="Agregar al carrito" >Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+
+                <div class="product">
+                    <img src="/Img/arepa.webp" alt="image product">
+                    <div class="product-info">
+                        <h4>Reina Pepiada</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="4"  aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/Img/sandia.jpg" alt="image product">
+                    <div class="product-info">
+                        <h4>Limonada de Sandia</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="5"  aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/Img/mojito.webp" alt="image product">
+                    <div class="product-info">
+                        <h4>Mojito</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="6" aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/Img/MoscowMule.jpeg" alt="image product">
+                    <div class="product-info">
+                        <h4>Moscow Mule</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="7" aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+                <div class="product">
+                    <img src="/Img/Cocacola.webp" alt="image product">
+                    <div class="product-info">
+                        <h4>CocaCola</h4>
+                        <p class="product-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+                
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                        <i class="fa-solid fa-star icon-star"></i>
+                
+                        <div class="price">
+                            <span>$35.00</span>
+                            <p id="currentPrice">$18.00</p>
+                        </div>
+                        <button class="btn-add" type="button" data-id="8" aria-label="Agregar al carrito">Agregar al carrito</button>
+                    </div>
+                </div><!--.product-->
+
+            </div>
+        </section>
+    </main>
+
+
+
+
+
+  <!-- Redes Sociales -->
+  <div class="social">
+    <a href="https://wa.me/123456789" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://instagram.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram"></a>
+    <a href="https://facebook.com" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://www.tiktok.com/es/" target="_blank"> <img src="/Img/tiktok.png" alt="TikTok"></a>
+  </div>
+
+
+    <script src="plugins/fontawesome/js/all.min.js"></script>
+    <script src="script.js">
+
+
+
+
+
+    </script>
+</body>
+</html>
